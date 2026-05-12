@@ -24,8 +24,5 @@ spec:
     kubeProxyReplacement: true
     operator:
       replicas: 1
-    ipv4NativeRoutingCIDR: ""
-    ipam:
-      operator:
-        clusterPoolIPv4PodCIDRList: "10.42.0.0/16"
-      mode: kubernetes
+    nodePort:
+      enabled: true

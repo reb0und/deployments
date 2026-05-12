@@ -8,6 +8,4 @@ helm install cilium cilium/cilium \
 	--set k8sServicePort=6443 \
 	--set kubeProxyReplacement=true \
 	--set operator.replicas=1 \
-	--set ipv4NativeRoutingCIDR="" \
-	--set ipam.operator.clusterPoolIPv4PodCIDRList="10.42.0.0/16" \
-	--set ipap.mode=kubernetes \
+	--set nodePort.enabled = true \
