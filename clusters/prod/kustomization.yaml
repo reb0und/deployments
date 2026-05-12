@@ -5,3 +5,4 @@ metadata:
   namespace: default
 resources:
   - core/kustomizations
+  - flux-system
