@@ -8,4 +8,5 @@ helm install cilium cilium/cilium \
 	--set k8sServicePort=6443 \
 	--set kubeProxyReplacement=true \
 	--set operator.replicas=1 \
-	--set nodePort.enabled = true \
+	--set nodePort.enabled=true \
+	--set socketLB.hostNamespaceOnly=true \
