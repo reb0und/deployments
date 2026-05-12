@@ -1,1 +1,25 @@
-# cilium
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: cilium
+  namespace: default
+spec:
+  chartRef:
+    kind: OCIRepository
+    name: cilium
+    namespace: flux-system
+  interval: 1m0s
+  values:
+    devices:
+      - wg0
+    nodePort:
+      enabled: true
+    encryption:
+      enabled: false
+    gatewayAPI:
+      enabled: true
+      hostNetwork:
+        enabled: true
+    kubeProxyReplacement: true
+    routingMode: tunnel

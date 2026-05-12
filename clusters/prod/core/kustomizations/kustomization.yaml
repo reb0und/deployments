@@ -4,5 +4,5 @@ metadata:
   name: kustomizations
   namespace: default
 resources:
-  # - infra.yaml
+  - infra.yaml
   - sources.yaml
