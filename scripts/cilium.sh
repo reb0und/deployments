@@ -7,5 +7,4 @@ helm install cilium cilium/cilium \
 	--set k8sServiceHost=172.20.0.2 \
 	--set k8sServicePort=6443 \
 	--set kubeProxyReplacement=true \
-	--set routingMode=native \
 	--set operator.replicas=1
