@@ -21,7 +21,6 @@ spec:
       enabled: true
       hostNetwork:
         enabled: true
-    kubeProxyReplacement: false
-    routingMode: native
+    kubeProxyReplacement: true
     operator:
       replicas: 1
