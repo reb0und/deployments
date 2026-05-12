@@ -23,3 +23,5 @@ spec:
         enabled: true
     kubeProxyReplacement: false
     routingMode: tunnel
+    operator:
+      replicas: 1
