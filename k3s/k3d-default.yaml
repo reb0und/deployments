@@ -1,0 +1,17 @@
+---
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: k3s-default
+servers: 1
+agents: 0
+image: docker.io/rancher/k3s:v1.36.0-k3s1
+options:
+  k3s:
+    extraArgs:
+      - arg: "--disable-network-policy"
+      - arg: "--flannel-backend=none"
+      - arg: "--disable-kube-proxy"
+      - arg: "--disable=servicelb"
+      - arg: "--disable=traefik"
+      - arg: "--disable=metrics-server"
