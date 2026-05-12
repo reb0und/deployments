@@ -6,9 +6,16 @@ metadata:
 servers: 1
 agents: 0
 image: docker.io/rancher/k3s:v1.36.0-k3s1
+volumes:
+  - volume: "$PWD/resolv.conf:/etc/k3s-resolv.conf"
+    nodeFilters:
+      - server:*
 options:
   k3s:
     extraArgs:
+      - arg: "--resolv-conf=/etc/resolve.conf"
+        nodeFilters:
+          - server:*
       - arg: "--disable-network-policy"
         nodeFilters:
           - server:*

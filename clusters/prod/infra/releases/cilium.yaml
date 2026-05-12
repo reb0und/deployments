@@ -24,7 +24,5 @@ spec:
     kubeProxyReplacement: true
     operator:
       replicas: 1
-    nodePort:
-      enabled: true
     socketLB:
       hostNamespaceOnly: true
