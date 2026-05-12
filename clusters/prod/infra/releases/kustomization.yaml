@@ -4,5 +4,5 @@ metadata:
   name: infra
   namespace: flux-system
 resources:
-  # - cilium.yaml
+  - cilium.yaml
   - metrics-server.yaml
