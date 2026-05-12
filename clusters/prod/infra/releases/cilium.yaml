@@ -15,12 +15,12 @@ spec:
     #   - wg0
     nodePort:
       enabled: true
-    encryption:
-      enabled: false
-    gatewayAPI:
-      enabled: true
-      hostNetwork:
-        enabled: true
+    # encryption:
+    #   enabled: false
+    # gatewayAPI:
+    #   enabled: true
+    #   hostNetwork:
+    #     enabled: true
     kubeProxyReplacement: true
     operator:
       replicas: 1
