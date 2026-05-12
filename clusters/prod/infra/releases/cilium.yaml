@@ -22,6 +22,6 @@ spec:
       hostNetwork:
         enabled: true
     kubeProxyReplacement: false
-    routingMode: tunnel
+    routingMode: native
     operator:
       replicas: 1
