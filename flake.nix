@@ -20,6 +20,8 @@
 					bat
 					sops
 					fluxcd
+					k3d
+					kubectl
 				];
 
 				shellHook = ''
