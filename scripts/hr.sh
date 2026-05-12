@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
-flux create helmrelease cilium \
+flux create helmrelease metrics-server \
 	--namespace=default \
-	--chart-ref=OCIRepository/cilium.flux-system \
-	--export > clusters/prod/infra/releases/cilium.yaml
+	--interval=10m \
+	--source="HelmRepository/metrics-server" \
+	--chart=metrics-server \
+	--chart-version=">3.13.0" \
+	--export > clusters/prod/infra/releases/metrics-server.yaml
