@@ -10,3 +10,6 @@ helm install cilium cilium/cilium \
 	--set operator.replicas=1 \
 	--set nodePort.enabled=true \
 	--set socketLB.hostNamespaceOnly=true \
+	--set enableIPv4Masquerade=true \
+	--set bpf.masquerade=false \
+	--set ipv4NativeRoutingCIDR=10.0.0.0/24 \

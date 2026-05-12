@@ -13,18 +13,17 @@ spec:
   values:
     # devices:
     #   - wg0
+    bpf:
+      masquerade: false
+    enableIPv4Masquerade: true
+    ipv4NativeRoutingCIDR: 10.0.0.0/24
+    k8sServiceHost: 155.246.36.10
+    k8sServicePort: 6443
+    kubeProxyReplacement: true
     nodePort:
       enabled: true
-    encryption:
-      enabled: false
-    gatewayAPI:
-      enabled: true
-      hostNetwork:
-        enabled: true
-    kubeProxyReplacement: true
     operator:
       replicas: 1
+    routingMode: native
     socketLB:
       hostNamespaceOnly: true
-    k8sServiceHost: 172.20.0.2
-    k8sServicePort: 6443
