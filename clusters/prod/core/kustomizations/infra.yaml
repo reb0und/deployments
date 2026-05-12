@@ -13,7 +13,7 @@ spec:
     kind: GitRepository
     name: flux-system
   dependsOn:
-    - sources
+    - name: sources
   targetNamespace: default
   timeout: 2m0s
   wait: true
