@@ -5,3 +5,4 @@ metadata:
   namespace: default
 resources:
   - cilium.yaml
+  - deployments.yaml
