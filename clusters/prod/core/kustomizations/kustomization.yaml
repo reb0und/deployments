@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Kustomization
+metadata:
+  name: infra
+  namespace: default
+resources:
+  # - infra.yaml
+  - sources.yaml
