@@ -4,7 +4,7 @@ helm repo update
 helm install cilium cilium/cilium \
 	--namespace=kube-system \
 	--version=1.19.3 \
-	--set k8sServiceHost=172.21.0.2 \
+	--set k8sServiceHost=172.20.0.2 \
 	--set k8sServicePort=6443 \
 	--set kubeProxyReplacement=true \
 	--set routingMode=native \
