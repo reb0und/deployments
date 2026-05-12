@@ -5,4 +5,4 @@ metadata:
   namespace: default
 resources:
   # - cilium.yaml
-  - metrics-server.yaml
+  # - metrics-server.yaml
