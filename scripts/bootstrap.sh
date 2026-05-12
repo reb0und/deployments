@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-flux bootstrap github \
-	--owner=$GITHUB \
-	--repository=deployments \
+flux bootstrap git \
+	--url=ssh://git@github.com:reb0und/deployments \
 	--branch=main \
 	--path=./clusters/prod \
-	--personal
