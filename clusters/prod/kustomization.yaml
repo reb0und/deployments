@@ -4,4 +4,4 @@ metadata:
   name: root
   namespace: default
 resources:
-  - ./core/kustomizations
+  - core/kustomizations
