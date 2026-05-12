@@ -23,6 +23,7 @@
 					k3d
 					kubectl
 					cilium-cli
+					kubernetes-helm
 				];
 
 				shellHook = ''

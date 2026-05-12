@@ -26,3 +26,5 @@ spec:
       replicas: 1
     socketLB:
       hostNamespaceOnly: true
+    k8sServiceHost: 172.20.0.0.2
+    k8sServicePort: 6443
