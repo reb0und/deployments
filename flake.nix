@@ -22,6 +22,7 @@
 					fluxcd
 					k3d
 					kubectl
+					cilium-cli
 				];
 
 				shellHook = ''
