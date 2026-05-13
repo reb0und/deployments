@@ -6,8 +6,8 @@ metadata:
   namespace: kube-system
 spec:
   parentRefs:
-    - name: web-gw
-      sectionName: web
+    - name: traefik
+      sectionName: web-gw
   rules:
     - backendRefs:
       - name: jellyfin
