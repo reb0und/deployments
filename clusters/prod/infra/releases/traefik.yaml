@@ -19,6 +19,8 @@ spec:
         maxSurge: 0
     hostNetwork: true
     providers:
+      kubernetesCRD:
+        enabled: false
       kubernetesGateway:
         enabled: true
         experimentalChannel: true
@@ -37,3 +39,7 @@ spec:
         containerPort: 3000
         protocol: TCP
         hostPort: 3000
+    securityContext:
+      capabilities:
+        add:
+          - NET_BIND_SERVICE
