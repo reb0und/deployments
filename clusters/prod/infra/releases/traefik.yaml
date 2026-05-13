@@ -13,6 +13,7 @@ spec:
   values:
     deployment:
       kind: DaemonSet
+      maxUnavailable: 1
     hostNetwork: true
     providers:
       kubernetesGateway:
