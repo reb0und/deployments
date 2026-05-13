@@ -7,3 +7,4 @@ resources:
   - traefik.yaml
   - mc.yaml
   - cilium.yaml
+  - jellyfin.yaml
