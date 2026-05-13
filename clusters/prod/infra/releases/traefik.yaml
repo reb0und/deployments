@@ -17,6 +17,8 @@ spec:
         experimentalChannel: true
     service:
       type: NodePort
+    gateway:
+      enabled: false
     ports:
       web:
         port: 8080
