@@ -7,5 +7,5 @@ metadata:
 spec:
   interval: 10m0s
   ref:
-    branch: main
+    tag: v1.5.1
   url: https://github.com/kubernetes-sigs/gateway-api
