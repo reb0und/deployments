@@ -33,7 +33,7 @@
 					alias cat=bat
 				'';
 
-				KUBECONFIG = /etc/rancher/rancher/k3s.yaml
+				KUBECONFIG = "/etc/rancher/rancher/k3s.yaml";
 			};
 		}
 	);
