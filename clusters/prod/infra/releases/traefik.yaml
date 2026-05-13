@@ -6,12 +6,8 @@ metadata:
   namespace: kube-system
 spec:
   chart:
-    spec:
-      chart: traefik
-      reconcileStrategy: ChartVersion
-      sourceRef:
-        kind: HelmRepository
-        name: traefik
-        namespace: flux-system
-      version: '>=40.1.0'
+    charttRef:
+      kind: OCIRepository
+      name: traefik
+      namespace: flux-system
   interval: 10m0s
