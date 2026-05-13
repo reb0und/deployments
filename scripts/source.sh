@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-flux create source git gateway-api \
-  --url=https://github.com/kubernetes-sigs/gateway-api \
-  --branch=main \
+flux create source helm traefik \
+  --url=https://traefik.github.io/charts \
   --interval=10m \
-  --export > ./clusters/prod/sources/gateway-api.yaml \
+  --export > ./clusters/prod/sources/traefik.yaml \
