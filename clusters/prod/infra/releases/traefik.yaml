@@ -24,3 +24,4 @@ spec:
         expose: 
           default: true
         nodePort: 30000
+        exposedPort: 3000
