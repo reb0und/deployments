@@ -11,3 +11,4 @@ spec:
   rules:
     - backendRefs:
       - name: mc-server
+        port: 3000
