@@ -20,6 +20,8 @@ spec:
         experimentalChannel: true
     service:
       enabled: false
+    gateway:
+      enabled: false
     ports:
       web:
         port: 80
