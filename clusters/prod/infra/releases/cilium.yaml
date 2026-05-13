@@ -1,5 +1,5 @@
 ---
-apisudo ss -ltnp | rg ':80|:8080'Version: helm.toolkit.fluxcd.io/v2
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: cilium
