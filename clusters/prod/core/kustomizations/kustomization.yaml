@@ -7,3 +7,4 @@ resources:
   - infra.yaml
   - sources.yaml
   - gateway-api.yaml
+  - ingress.yaml
