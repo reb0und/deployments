@@ -11,5 +11,4 @@ spec:
   rules:
     - backendRefs:
       - name: jellyfin
-        namespace: default
         port: 8096
