@@ -16,6 +16,8 @@ spec:
     enableIPv4Masquerade: true
     gatewayAPI:
       enabled: true
+      hostNetwork:
+        enabled: true
     ipv4NativeRoutingCIDR: 10.0.0.0/24
     k8sServiceHost: 155.246.36.10
     k8sServicePort: 6443
