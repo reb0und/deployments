@@ -29,6 +29,13 @@ spec:
           default: true
         nodePort: 30001
         exposedPort: 8080
+      web-internal:
+        port: 8001
+        protocol: TCP
+        expose: 
+          default: true
+        nodePort: 30002
+        exposedPort: 8001
       test:
         port: 3000
         protocol: TCP
