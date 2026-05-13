@@ -33,6 +33,7 @@ spec:
       securityContext:
         capabilities:
           keepCapNetBindService: true
+          keepNetBindService: true
           envoy:
             - NET_ADMIN
             - SYS_ADMIN
