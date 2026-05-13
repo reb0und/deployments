@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
-flux create helmrelease traefik \
+flux create helmrelease jellyfin \
 	--namespace=default \
 	--interval=10m \
-	--source="HelmRepository/traefik" \
-	--chart=traefik \
-	--chart-version=">=40.1.0" \
-	--export > clusters/prod/infra/releases/traefik.yaml
+	--source="HelmRepository/jellyfin" \
+	--chart=jellyfin \
+	--chart-version=">=3.2.0" \
+	--export > clusters/prod/core/releases/jellyfin.yaml

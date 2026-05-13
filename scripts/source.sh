@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-flux create source oci traefik \
-  --url=oci://ghcr.io/traefik/helm/traefik \
-  --tag=40.1.0 \
+flux create source helm jellyfin \
+  --url=https://jellyfin.github.io/jellyfin-helm \
   --interval=10m \
-  --export > ./clusters/prod/sources/traefik.yaml \
+  --export > ./clusters/prod/sources/jellyfin.yaml \
