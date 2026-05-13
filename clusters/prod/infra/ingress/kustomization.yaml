@@ -4,4 +4,4 @@ metadata:
   name: root
   namespace: default
 resources:
-  # - traefik.yaml
+  - traefik.yaml
