@@ -39,7 +39,7 @@ spec:
         containerPort: 3000
         protocol: TCP
         hostPort: 3000
-    containersecurityContext:
+    containerSecurityContext:
       capabilities:
         add:
           - NET_BIND_SERVICE
