@@ -12,6 +12,8 @@ spec:
   interval: 10m0s
   values:
     providers:
+      kubernetesCRD:
+        enabled: false
       kubernetesGateway:
         enabled: true
         experimentalChannel: true
@@ -21,7 +23,7 @@ spec:
       enabled: false
     ports:
       web:
-        port: 8080
+        port: 8000
         protocol: TCP
         expose: 
           default: true
