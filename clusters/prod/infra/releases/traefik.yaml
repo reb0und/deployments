@@ -18,8 +18,9 @@ spec:
     service:
       type: NodePort
     ports:
-      pg:
+      test:
         port: 3000
         protocol: TCP
         expose: 
           default: true
+        nodePort: 30000
