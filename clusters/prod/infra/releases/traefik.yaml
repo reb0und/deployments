@@ -10,3 +10,16 @@ spec:
    name: traefik
    namespace: flux-system
   interval: 10m0s
+  values:
+    providers:
+      kubernetesGateway:
+        enabled: true
+        experimentalChannel: true
+    service:
+      type: NodePort
+    ports:
+      pg:
+        port: 3000
+        protocol: TCP
+        expose: 
+          default: true
