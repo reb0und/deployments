@@ -12,5 +12,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: traefik
+        namespace: flux-system
       version: '>=40.1.0'
   interval: 10m0s
