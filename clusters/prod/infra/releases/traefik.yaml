@@ -13,7 +13,10 @@ spec:
   values:
     deployment:
       kind: DaemonSet
-      maxUnavailable: 1
+    updateStrategy:
+      type: RollingUpdate
+      rollingUpdate:
+        maxUnavailable: 1
     hostNetwork: true
     providers:
       kubernetesGateway:
