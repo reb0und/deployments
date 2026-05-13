@@ -4,8 +4,5 @@ metadata:
   name: kustomizations
   namespace: default
 resources:
-  - infra.yaml
-  - sources.yaml
-  - gateway-api.yaml
-  - ingress.yaml
-  - core.yaml
+  # - mc.yaml
+  # - jellyfin.yaml
