@@ -1,0 +1,15 @@
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: web-gw
+  namespace: kube-system
+spec:
+  gatewayClassName: cilium
+  listeners:
+    - name: web
+      protocol: http
+      port: 80
+      allowedRoutes:
+        namespaces:
+          from: Same
