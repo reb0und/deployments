@@ -41,10 +41,15 @@ metadata:
   namespace: kube-system
 spec:
   parentRefs:
-    - name: web-gw
+    - name: traefik
       namespace: kube-system
+      sectionName: web-gw
   rules:
-    - backendRefs:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
         - name: echo
           port: 80
 # ---
