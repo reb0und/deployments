@@ -15,22 +15,6 @@ spec:
       labels:
         app: qbittorrent
     spec:
-      initContainers:
-        - name: perms
-          image: busybox:latest
-          volumeMounts:
-            - mountPath: "/media"
-              name: media
-          command:
-            - sh
-            - -c
-            - |
-              mkdir -p /media/film
-              chown -R 1000:1000 /media/film
-              chmod -R u+rwX,g+rwX /media/film
-      securityContext:
-        fsGroup: 1000
-        fsGroupChangePolicy: OnRootMismatch
       containers:
         - name: qbittorrent
           image: lscr.io/linuxserver/qbittorrent:latest
