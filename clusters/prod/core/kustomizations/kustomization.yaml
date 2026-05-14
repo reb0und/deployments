@@ -9,3 +9,4 @@ resources:
   - gateway-api.yaml
   - ingress.yaml
   - core.yaml
+  - deployments.yaml
