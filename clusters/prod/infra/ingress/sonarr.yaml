@@ -11,6 +11,6 @@ spec:
   hostnames:
     - sonarr.internal
   rules:
-      backendRefs:
+    - backendRefs:
       - name: sonarr
         port: 8989
