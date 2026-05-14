@@ -12,6 +12,12 @@ spec:
     - matches:
         - path:
             value: "/jackett"
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /
     - backendRefs:
       - name: jackett
         port: 9117

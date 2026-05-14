@@ -12,6 +12,12 @@ spec:
     - matches:
         - path:
             value: "/sonarr"
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /
     - backendRefs:
       - name: sonarr
         port: 8989

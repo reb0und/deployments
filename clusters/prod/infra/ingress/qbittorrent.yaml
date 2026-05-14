@@ -12,6 +12,12 @@ spec:
     - matches:
         - path:
             value: "/qbt"
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /
     - backendRefs:
       - name: qbittorrent
         port: 8080

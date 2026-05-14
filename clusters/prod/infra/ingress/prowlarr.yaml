@@ -12,6 +12,12 @@ spec:
     - matches:
         - path:
             value: "/prowlarr"
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /
     - backendRefs:
       - name: prowlarr
         port: 9696
