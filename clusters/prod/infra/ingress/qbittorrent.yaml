@@ -19,6 +19,6 @@ spec:
             path:
               type: ReplacePrefixMatch
               replacePrefixMatch: /
-    - backendRefs:
-      - name: qbittorrent
-        port: 8080
+      backendRefs:
+        - name: qbittorrent
+          port: 8080

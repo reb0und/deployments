@@ -19,6 +19,6 @@ spec:
             path:
               type: ReplacePrefixMatch
               replacePrefixMatch: /
-    - backendRefs:
+      backendRefs:
       - name: jackett
         port: 9117
