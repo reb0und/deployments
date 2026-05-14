@@ -23,7 +23,7 @@ spec:
             - -c
             - |
               mkdir -p /media/film
-              chown RR 1000:1000 /media/film
+              chown -R 1000:1000 /media/film
               chmod -R u+rwX,g+rwX /media/film
       securityContext:
         fsGroup: 1000
