@@ -18,11 +18,6 @@ spec:
       containers:
         - name: flaresolverr
           image: ghcr.io/flaresolverr/flaresolverr:latest
-          volumeMounts:
-            - mountPath: "/config"
-              name: config
-            - mountPath: "/downloads"
-              name: downloads
           env:
             - name: LOG_LEVEL
               value: "info"
