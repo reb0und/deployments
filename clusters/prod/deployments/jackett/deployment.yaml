@@ -21,8 +21,8 @@ spec:
           volumeMounts:
             - mountPath: "/config"
               name: config
-            - mountPath: "/downloads"
-              name: downloads
+            - mountPath: "/media"
+              name: media
           env:
             - name: PUID
               value: "1000"
@@ -38,6 +38,6 @@ spec:
         - name: config
           persistentVolumeClaim:
             claimName: jackett-config
-        - name: downloads
+        - name: media
           persistentVolumeClaim:
             claimName: jellyfin-media

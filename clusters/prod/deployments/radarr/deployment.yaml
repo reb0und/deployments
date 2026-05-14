@@ -39,8 +39,6 @@ spec:
               name: config
             - mountPath: "/media"
               name: media
-            - mountPath: "/downloads"
-              name: media
           env:
             - name: PUID
               value: "1000"

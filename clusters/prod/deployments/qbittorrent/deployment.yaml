@@ -19,15 +19,15 @@ spec:
         - name: perms
           image: busybox:latest
           volumeMounts:
-            - mountPath: "/downloads"
-              name: downloads
+            - mountPath: "/media"
+              name: media
           command:
             - sh
             - -c
             - |
-              mkdir -p /downloads
-              chown -R 1000:1000 /downloads
-              chmod -R u+rwX,g+rwX /downloads
+              mkdir -p /media
+              chown -R 1000:1000 /media
+              chmod -R u+rwX,g+rwX /media
       securityContext:
         fsGroup: 1000
         fsGroupChangePolicy: OnRootMismatch
@@ -37,8 +37,8 @@ spec:
           volumeMounts:
             - mountPath: "/config"
               name: config
-            - mountPath: "/downloads"
-              name: downloads
+            - mountPath: "/media"
+              name: media
           env:
             - name: PUID
               value: "1000"
@@ -57,6 +57,6 @@ spec:
         - name: config
           persistentVolumeClaim:
             claimName: qbittorrent-config
-        - name: downloads
+        - name: media
           persistentVolumeClaim:
             claimName: jellyfin-media
