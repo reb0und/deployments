@@ -4,6 +4,6 @@ metadata:
   name: kustomization
   namespace: default
 resources:
-  - radarr
-  - qbittorrent
-  - jackett
+  - deployment.yaml
+  - service.yaml
+  - pvc.yaml
