@@ -8,17 +8,9 @@ spec:
   parentRefs:
     - name: traefik
       sectionName: web-internal-gw
+  hostnames:
+    - qbt.internal
   rules:
-    - matches:
-        - path:
-            type: PathPrefix
-            value: "/qbt"
-      filters:
-        - type: URLRewrite
-          urlRewrite:
-            path:
-              type: ReplacePrefixMatch
-              replacePrefixMatch: /
-      backendRefs:
+    - backendRefs:
         - name: qbittorrent
           port: 8080
