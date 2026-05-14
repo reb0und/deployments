@@ -7,3 +7,8 @@ resources:
   - traefik.yaml
   - mc.yaml
   - jellyfin.yaml
+  - jackett.yaml
+  - prowlarr.yaml
+  - qbittorrent.yaml
+  - radarr.yaml
+  - sonarr.yaml
