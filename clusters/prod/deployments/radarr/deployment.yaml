@@ -18,6 +18,9 @@ spec:
       initContainers:
         - name: perms
           image: busybox:latest
+          volumeMounts:
+            - mountPath: "/media"
+              name: media
           command:
             - sh
             - -c
