@@ -12,5 +12,8 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  dependsOn:
+    - name: infra
+    - name: ingress
   timeout: 2m0s
   wait: true
