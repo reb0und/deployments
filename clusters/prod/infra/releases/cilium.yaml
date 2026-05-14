@@ -11,6 +11,8 @@ spec:
     namespace: flux-system
   interval: 1m0s
   values:
+    egressGateway: 
+      enabled: true
     bpf:
       masquerade: false
     enableIPv4Masquerade: true
