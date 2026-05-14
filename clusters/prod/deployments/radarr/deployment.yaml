@@ -28,6 +28,9 @@ spec:
               mkdir -p /media/film
               chown -R 1000:1000 /media/film
               chmod -R u+rwX,g+rwX /media/film
+              mkdir -p /media/downloads/radarr /media/downloads/sonarr-tv /media/film /media/tv
+              chown -R 1000:1000 /media/downloads /media/film /media/tv
+              chmod -R u+rwX,g+rwX /media/downloads /media/film /media/tv
       securityContext:
         fsGroup: 1000
         fsGroupChangePolicy: OnRootMismatch
