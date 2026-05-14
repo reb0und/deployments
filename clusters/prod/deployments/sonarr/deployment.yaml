@@ -28,7 +28,7 @@ spec:
               mkdir -p /media/tv
               chown -R 1000:1000 /media/tv
               chmod -R u+rwX,g+rwX /media/tv
-              mkdir -p /media/downloads/radarr /media/downloads/sonarr-tv /media/film /media/tv
+              mkdir -p /media/downloads/radarr /media/downloads/tv-sonarr /media/film /media/tv
               chown -R 1000:1000 /media/downloads /media/film /media/tv
               chmod -R u+rwX,g+rwX /media/downloads /media/film /media/tv
       securityContext:
