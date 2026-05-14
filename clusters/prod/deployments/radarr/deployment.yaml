@@ -15,6 +15,16 @@ spec:
       labels:
         app: radarr
     spec:
+      initContainers:
+        - name: perms
+          image: buxybox:latest
+          command:
+            - sh
+            - -c
+            - |
+              mkdir -p /media/film
+              chown RR 1000:1000 /media/film
+              chmod -R u+rwX,g+rwX /media/film
       securityContext:
         fsGroup: 1000
         fsGroupChangePolicy: OnRootMismatch
