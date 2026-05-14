@@ -15,6 +15,9 @@ spec:
       labels:
         app: radarr
     spec:
+      securityContext:
+        fsGroup: 1000
+        fsGroupChangePolicy: OnRootMismatch
       containers:
         - name: radarr
           image: lscr.io/linuxserver/radarr:latest
