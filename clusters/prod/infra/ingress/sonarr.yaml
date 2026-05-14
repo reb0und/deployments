@@ -8,17 +8,9 @@ spec:
   parentRefs:
     - name: traefik
       sectionName: web-internal-gw
+  hostnames:
+    - sonarr.internal
   rules:
-    - matches:
-        - path:
-            type: PathPrefix
-            value: "/sonarr"
-      filters:
-        - type: URLRewrite
-          urlRewrite:
-            path:
-              type: ReplacePrefixMatch
-              replacePrefixMatch: /
       backendRefs:
       - name: sonarr
         port: 8989

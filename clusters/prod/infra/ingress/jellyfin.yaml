@@ -8,17 +8,9 @@ spec:
   parentRefs:
     - name: traefik
       sectionName: web-internal-gw
+  hostnames:
+    - jellyfin.internal
   rules:
-    - matches:
-        - path:
-            type: PathPrefix
-            value: "/jellyfin"
-      filters:
-        - type: URLRewrite
-          urlRewrite:
-            path:
-              type: ReplacePrefixMatch
-              replacePrefixMatch: /
-      backendRefs:
+    - backendRefs:
       - name: jellyfin
         port: 8096

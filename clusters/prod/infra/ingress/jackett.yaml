@@ -8,17 +8,9 @@ spec:
   parentRefs:
     - name: traefik
       sectionName: web-internal-gw
+  hostnames:
+    - jackett.internal
   rules:
-    - matches:
-        - path:
-            type: PathPrefix
-            value: "/jackett"
-      filters:
-        - type: URLRewrite
-          urlRewrite:
-            path:
-              type: ReplacePrefixMatch
-              replacePrefixMatch: /
-      backendRefs:
+    - backendRefs:
       - name: jackett
         port: 9117
