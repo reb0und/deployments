@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sonarr
+  namespace: kube-system
+  labels:
+    app: sonarr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sonarr
+  template:
+    metadata:
+      labels:
+        app: sonarr
+    spec:
+      initContainers:
+        - name: perms
+          image: busybox:latest
+          volumeMounts:
+            - mountPath: "/media"
+              name: media
+          command:
+            - sh
+            - -c
+            - |
+              mkdir -p /media/tv
+              chown -R 1000:1000 /media/tv
+              chmod -R u+rwX,g+rwX /media/tv
+      securityContext:
+        fsGroup: 1000
+        fsGroupChangePolicy: OnRootMismatch
+      containers:
+        - name: sonarr
+          image: lscr.io/linuxserver/sonarr:latest
+          volumeMounts:
+            - mountPath: "/config"
+              name: config
+            - mountPath: "/media"
+              name: media
+            - mountPath: "/downloads"
+              name: downloads
+          env:
+            - name: PUID
+              value: "1000"
+            - name: PGID
+              value: "1000"
+            - name: TZ
+              value: "Etc/UTC"
+          ports: 
+            - containerPort: 8989
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: sonarr-config
+        - name: media
+          persistentVolumeClaim:
+            claimName: jellyfin-media
+        - name: downloads
+          persistentVolumeClaim:
+            claimName: qbittorrent-downloads
