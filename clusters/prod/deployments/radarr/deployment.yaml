@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: radarr
-  namespace: default
+  namespace: kube-system
   labels:
     app: radarr
 spec:
@@ -18,7 +18,27 @@ spec:
       containers:
         - name: radarr
           image: lscr.io/linuxserver/radarr:latest
+          volumeMounts:
+            - mountPath: "/config"
+              name: config
+            - mountPath: "/media/film"
+              name: media
+          env:
+            - name: PUID
+              value: 1000
+            - name: PGID
+              value: 1000
+            - name: TZ
+              value: "Etc/UTC"
           ports: 
             - containerPort: 7878
-          args:
-            - ""
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: radarr-config
+        - name: media
+          persistentVolumeClaim:
+            claimName: jellyfin-media
+        # - name: downloads
+        #   persistentVolumeClaim:
+        #     claimName: torrent-downloads
