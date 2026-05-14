@@ -1,0 +1,21 @@
+apiVersion: cilium.io/v2
+kind: CiliumEgressGatewayPolicy
+metadata:
+  name: qbt-egress
+spec:
+  selectors:
+    - podSelector:
+        matchLabels:
+          app: qbittorrent
+          io.kubernetes.pod.namespace: kube-system
+  destinationCIDRs:
+    - "0.0.0.0/0"
+  excludedCIDRs:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+  egressGateway:
+    nodeSelector:
+      matchLabels:
+        kubernetes.io/hostname: sparrow
+    interface: wg0
