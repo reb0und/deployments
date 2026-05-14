@@ -40,7 +40,7 @@ spec:
             - mountPath: "/media"
               name: media
             - mountPath: "/downloads"
-              name: downloads
+              name: media
           env:
             - name: PUID
               value: "1000"
@@ -57,6 +57,3 @@ spec:
         - name: media
           persistentVolumeClaim:
             claimName: jellyfin-media
-        - name: downloads
-          persistentVolumeClaim:
-            claimName: qbittorrent-downloads

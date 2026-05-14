@@ -40,4 +40,4 @@ spec:
             claimName: jackett-config
         - name: downloads
           persistentVolumeClaim:
-            claimName: qbittorrent-downloads
+            claimName: jellyfin-media
