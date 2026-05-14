@@ -4,6 +4,7 @@ metadata:
   name: qbittorrent
   namespace: kube-system
 spec:
+  type: NodePort
   selector:
     app: qbittorrent
   ports:
@@ -11,11 +12,13 @@ spec:
       protocol: TCP
       port: 8080
       targetPort: 8080
-    - name: torrent
+    - name: torrent-tcp
       protocol: TCP
       port: 6881
       targetPort: 6881
+      nodePort: 30003
     - name: torrent-udp
       protocol: UDP
       port: 6881
       targetPort: 6881
+      nodePort: 30004
