@@ -5,7 +5,7 @@ metadata:
   namespace: kube-system
 spec:
   selector:
-    jackett: jackett
+    app: jackett
   ports:
     - protocol: TCP
       port: 9117
