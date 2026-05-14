@@ -15,6 +15,22 @@ spec:
       labels:
         app: qbittorrent
     spec:
+      initContainers:
+        - name: perms
+          image: busybox:latest
+          volumeMounts:
+            - mountPath: "/downloads"
+              name: downloads
+          command:
+            - sh
+            - -c
+            - |
+              mkdir -p /downloads
+              chown -R 1000:1000 /downloads
+              chmod -R u+rwX,g+rwX /downloads
+      securityContext:
+        fsGroup: 1000
+        fsGroupChangePolicy: OnRootMismatch
       containers:
         - name: qbittorrent
           image: lscr.io/linuxserver/qbittorrent:latest
