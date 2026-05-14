@@ -14,7 +14,7 @@ spec:
     egressGateway: 
       enabled: true
     bpf:
-      masquerade: false
+      masquerade: true
     enableIPv4Masquerade: true
     ipv4NativeRoutingCIDR: 10.0.0.0/24
     k8sServiceHost: 155.246.36.10
