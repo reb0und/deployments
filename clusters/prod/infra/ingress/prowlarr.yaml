@@ -11,6 +11,7 @@ spec:
   rules:
     - matches:
         - path:
+            type: PathPrefix
             value: "/prowlarr"
       filters:
         - type: URLRewrite
