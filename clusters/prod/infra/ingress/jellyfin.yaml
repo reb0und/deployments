@@ -11,7 +11,7 @@ spec:
   hostnames:
     - jellyfin.internal
   rules:
-      backendRefs:
+    - backendRefs:
       - name: jellyfin
         port: 8096
 ---
