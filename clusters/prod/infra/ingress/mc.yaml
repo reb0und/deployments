@@ -6,7 +6,7 @@ metadata:
   namespace: kube-system
 spec:
   parentRefs:
-    - name: traefik-gateway
+    - name: traefik
       sectionName: mc-gw
   rules:
     - backendRefs:
