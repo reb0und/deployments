@@ -9,3 +9,4 @@ resources:
   - gateway-api.yaml
   - traefik.yaml
   - jellyfin.yaml
+  - minecraft.yaml
