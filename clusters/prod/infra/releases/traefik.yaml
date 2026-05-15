@@ -36,6 +36,13 @@ spec:
           default: true
         nodePort: 30002
         exposedPort: 8001
+      jellyfin:
+        port: 8002
+        protocol: TCP
+        expose: 
+          default: true
+        nodePort: 30005
+        exposedPort: 8002
       test:
         port: 3000
         protocol: TCP
