@@ -10,5 +10,5 @@ spec:
       sectionName: mc-gw
   rules:
     - backendRefs:
-      - name: mc-server
-        port: 3000
+      - name: minecraft
+        port: 25565
