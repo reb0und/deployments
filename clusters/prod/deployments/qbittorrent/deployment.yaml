@@ -21,6 +21,8 @@ spec:
           volumeMounts:
             - mountPath: "/media"
               name: media
+            - mountPath: "/config"
+              name: config
           command:
             - sh
             - -c
@@ -31,6 +33,26 @@ spec:
               mkdir -p /media/downloads/radarr /media/downloads/tv-sonarr /media/film /media/tv
               chown -R 1000:1000 /media/downloads /media/film /media/tv
               chmod -R u+rwX,g+rwX /media/downloads /media/film /media/tv
+
+              CONF=/config/qBittorrent/qBittorrent.conf
+              mkdir -p /config/qBittorrent
+              touch "$CONF"
+
+              grep -q 'WebUI\\AuthSubnetWhitelistEnabled' "$CONF" \
+                && sed -i 's#WebUI\\AuthSubnetWhitelistEnabled=.*#WebUI\\AuthSubnetWhitelistEnabled=true#' "$CONF" \
+                || echo 'WebUI\AuthSubnetWhitelistEnabled=true' >> "$CONF"
+
+              grep -q 'WebUI\\AuthSubnetWhitelist=' "$CONF" \
+                && sed -i 's#WebUI\\AuthSubnetWhitelist=.*#WebUI\\AuthSubnetWhitelist=0.0.0.0/0#' "$CONF" \
+                || echo 'WebUI\AuthSubnetWhitelist=0.0.0.0/0' >> "$CONF"
+
+              grep -q 'WebUI\\HostHeaderValidation' "$CONF" \
+                && sed -i 's#WebUI\\HostHeaderValidation=.*#WebUI\\HostHeaderValidation=false#' "$CONF" \
+                || echo 'WebUI\HostHeaderValidation=false' >> "$CONF"
+
+              grep -q 'WebUI\\ServerDomains' "$CONF" \
+                && sed -i 's#WebUI\\ServerDomains=.*#WebUI\\ServerDomains=*#' "$CONF" \
+                || echo 'WebUI\ServerDomains=*' >> "$CONF"
       securityContext:
         fsGroup: 1000
         fsGroupChangePolicy: OnRootMismatch
