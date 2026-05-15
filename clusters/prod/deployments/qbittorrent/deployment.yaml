@@ -34,25 +34,18 @@ spec:
               chown -R 1000:1000 /media/downloads /media/film /media/tv
               chmod -R u+rwX,g+rwX /media/downloads /media/film /media/tv
 
-              CONF=/config/qBittorrent/qBittorrent.conf
               mkdir -p /config/qBittorrent
-              touch "$CONF"
+              cat >> "/config/qBittorrent/qBittorrent.conf" <<'EOF'
 
-              grep -q 'WebUI\\AuthSubnetWhitelistEnabled' "$CONF" \
-                && sed -i 's#WebUI\\AuthSubnetWhitelistEnabled=.*#WebUI\\AuthSubnetWhitelistEnabled=true#' "$CONF" \
-                || echo 'WebUI\AuthSubnetWhitelistEnabled=true' >> "$CONF"
+              [Preferences]
+              WebUI\AuthSubnetWhitelistEnabled=true
+              WebUI\AuthSubnetWhitelist=0.0.0.0/0
+              WebUI\HostHeaderValidation=false
+              WebUI\CSRFProtection=false
+              WebUI\ServerDomains=*
+              EOF    
 
-              grep -q 'WebUI\\AuthSubnetWhitelist=' "$CONF" \
-                && sed -i 's#WebUI\\AuthSubnetWhitelist=.*#WebUI\\AuthSubnetWhitelist=0.0.0.0/0#' "$CONF" \
-                || echo 'WebUI\AuthSubnetWhitelist=0.0.0.0/0' >> "$CONF"
-
-              grep -q 'WebUI\\HostHeaderValidation' "$CONF" \
-                && sed -i 's#WebUI\\HostHeaderValidation=.*#WebUI\\HostHeaderValidation=false#' "$CONF" \
-                || echo 'WebUI\HostHeaderValidation=false' >> "$CONF"
-
-              grep -q 'WebUI\\ServerDomains' "$CONF" \
-                && sed -i 's#WebUI\\ServerDomains=.*#WebUI\\ServerDomains=*#' "$CONF" \
-                || echo 'WebUI\ServerDomains=*' >> "$CONF"
+              chown -R 1000:1000 /config/qBittorrent
       securityContext:
         fsGroup: 1000
         fsGroupChangePolicy: OnRootMismatch
