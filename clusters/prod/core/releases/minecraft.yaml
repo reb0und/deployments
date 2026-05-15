@@ -18,3 +18,5 @@ spec:
   values:
     minecraftServer:
       eula: "TRUE"
+      motd: "hi"
+      difficulty: normal
