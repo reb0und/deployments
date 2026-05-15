@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
-flux create helmrelease jellyfin \
-	--namespace=default \
+flux create helmrelease minecraft \
+	--namespace=kube-system \
 	--interval=10m \
-	--source="HelmRepository/jellyfin" \
-	--chart=jellyfin \
-	--chart-version=">=3.2.0" \
-	--export > clusters/prod/core/releases/jellyfin.yaml
+	--source="HelmRepository/minecraft" \
+	--chart=minecraft \
+	--chart-version=">=5.1.3" \
+	--export > clusters/prod/core/releases/minecraft.yaml

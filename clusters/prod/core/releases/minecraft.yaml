@@ -1,0 +1,16 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: minecraft
+  namespace: kube-system
+spec:
+  chart:
+    spec:
+      chart: minecraft
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: minecraft
+      version: '>=5.1.3'
+  interval: 10m0s
