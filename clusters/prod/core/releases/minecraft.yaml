@@ -20,3 +20,5 @@ spec:
       eula: "TRUE"
       motd: "hi"
       difficulty: normal
+      type: "FORGE"
+      downloadModpackUrl: "https://www.curseforge.com/minecraft/share/jIOfJ034"
