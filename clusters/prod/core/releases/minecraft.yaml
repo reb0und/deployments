@@ -19,6 +19,7 @@ spec:
     image:
       repository: itzp/minecraft-server
       tag: stable-java17
+      pullPolicy: Always
     persistence:
       dataDir:
         enabled: true
