@@ -31,3 +31,12 @@ spec:
       type: "CURSEFORGE"
       version: "1.20.1"
       cfServerMod: "/data/atm-server.zip"
+  livenessProbe:
+    initialDelaySeconds: 900
+    periodSeconds: 10
+    failureThreshold: 30
+
+  readinessProbe:
+    initialDelaySeconds: 900
+    periodSeconds: 10
+    failureThreshold: 30
