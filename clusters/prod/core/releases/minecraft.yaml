@@ -23,6 +23,5 @@ spec:
       type: "FORGE"
       # downloadModpackUrl: "https://www.curseforge.com/minecraft/modpacks/all-the-mods-9"
       modUrls: [
-        "https://www.curseforge.com/minecraft/modpacks/all-the-mods-9",
-        "https://www.curseforge.com/minecraft/mc-mods/webdisplays"
+        "https://www.curseforge.com/minecraft/modpacks/all-the-mods-9/download/7097953"
       ]
