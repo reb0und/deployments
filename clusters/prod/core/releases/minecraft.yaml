@@ -26,4 +26,4 @@ spec:
       difficulty: normal
       # type: "CURSEFORGE"
       # version: "1.20.1"
-      cfServerMod: "/data/atm.zip"
+      # cfServerMod: "/data/atm.zip"
