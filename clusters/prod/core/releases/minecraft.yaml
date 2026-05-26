@@ -17,7 +17,7 @@ spec:
   interval: 10m0s
   values:
     image:
-      repository: itzp/minecraft-server
+      repository: itzg/minecraft-server
       tag: stable-java17
       pullPolicy: Always
     persistence:
