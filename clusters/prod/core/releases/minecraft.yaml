@@ -25,3 +25,7 @@ spec:
       motd: "hi"
       difficulty: normal
       type: "CURSEFORGE"
+      version: "1.20.1"
+
+      extraEnv:
+        CF_SERVER_MOD: "/data/atm.zip"
