@@ -21,4 +21,8 @@ spec:
       motd: "hi"
       difficulty: normal
       type: "FORGE"
-      downloadModpackUrl: "https://www.curseforge.com/minecraft/share/jIOfJ034"
+      # downloadModpackUrl: "https://www.curseforge.com/minecraft/modpacks/all-the-mods-9"
+      modUrls: [
+        "https://www.curseforge.com/minecraft/modpacks/all-the-mods-9",
+        "https://www.curseforge.com/minecraft/mc-mods/webdisplays"
+      ]
