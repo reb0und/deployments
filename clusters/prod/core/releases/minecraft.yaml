@@ -16,12 +16,12 @@ spec:
       version: '>=5.1.3'
   interval: 10m0s
   values:
+    persistence:
+      dataDir:
+        enabled: true
+        size: 50Gi
     minecraftServer:
       eula: "TRUE"
       motd: "hi"
       difficulty: normal
-      type: "FORGE"
-      downloadModpackUrl: "https://www.curseforge.com/minecraft/modpacks/all-the-mods-9"
-      # modUrls: [
-      #   "https://www.curseforge.com/minecraft/modpacks/all-the-mods-9/download/7097953"
-      # ]
+      type: "CURSEFORGE"
