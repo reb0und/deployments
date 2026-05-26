@@ -16,8 +16,6 @@ spec:
       version: '>=5.1.3'
   interval: 10m0s
   values:
-    extraEnv:
-      CF_SERVER_MOD: "/data/atm.zip"
     persistence:
       dataDir:
         enabled: true
@@ -28,3 +26,4 @@ spec:
       difficulty: normal
       type: "CURSEFORGE"
       version: "1.20.1"
+      cfServerMod: "/data/atm.zip"
