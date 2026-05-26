@@ -16,10 +16,13 @@ spec:
       version: '>=5.1.3'
   interval: 10m0s
   values:
+    image:
+      repository: itzp/minecraft-server
+      tag: stable-java17
     persistence:
       dataDir:
         enabled: true
-        size: 50Gi
+        Size: 50Gi
     minecraftServer:
       eula: "TRUE"
       motd: "hi"
