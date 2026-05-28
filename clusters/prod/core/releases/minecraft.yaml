@@ -27,7 +27,7 @@ spec:
       failureThreshold: 30
     image:
       repository: itzg/minecraft-server
-      tag: stable-java17
+      tag: stable-java21
       pullPolicy: Always
     persistence:
       dataDir:
@@ -40,3 +40,9 @@ spec:
       type: "CURSEFORGE"
       version: "1.21.1"
       cfServerMod: "/data/atm-server.zip"
+
+      modrinth:
+        projects: [
+          "create",
+          "sable",
+        ]
