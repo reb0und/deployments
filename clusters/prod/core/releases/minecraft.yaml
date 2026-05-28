@@ -16,6 +16,16 @@ spec:
       version: '>=5.1.3'
   interval: 10m0s
   values:
+    readinessProbe:
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      failureThreshold: 30
+      timeoutSeconds: 3
+    livenessProbe:
+      initialDelaySeconds: 500
+      periodSeconds: 30
+      failureThreshold: 10
+      timeoutSeconds: 3
     resources:
       requests:
         memory: "8G"
@@ -43,4 +53,8 @@ spec:
           secretKey: curseforge-api-key
         slug: craftoria
         include:
-          - "create-aeronautics"
+          - create-aeronautics
+      modrinth:
+        projects:
+          - create
+          - sable
