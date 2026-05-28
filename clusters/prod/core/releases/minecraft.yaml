@@ -34,7 +34,6 @@ spec:
         enabled: true
         Size: 50Gi
     minecraftServer:
-      memory: 10G
       eula: "TRUE"
       motd: "hi"
       difficulty: normal
