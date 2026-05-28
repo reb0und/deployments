@@ -42,6 +42,6 @@ spec:
         apiKey:
           existingSecret: curseforge-api-key
           secretKey: curseforge-api-key
-        slug: "1039252"
-        include:
-          - "create-aeronautics"
+        pageUrl: "https://www.curseforge.com/minecraft/modpacks/craftoria"
+        # include:
+        #   - "create-aeronautics"
