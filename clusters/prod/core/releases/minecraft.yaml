@@ -35,7 +35,7 @@ spec:
       eula: "TRUE"
       motd: "hi"
       difficulty: normal
-      type: "VANILLA"
+      type: "AUTO_CURSEFORGE"
       version: "1.21.1"
       cfServerMod: "/data/atm-server.zip"
       autoCurseforge:
