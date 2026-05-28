@@ -37,11 +37,10 @@ spec:
       difficulty: normal
       type: "AUTO_CURSEFORGE"
       version: "1.21.1"
-      cfServerMod: "/data/atm-server.zip"
       autoCurseForge:
         apiKey:
           existingSecret: curseforge-api-key
           secretKey: curseforge-api-key
-        slug: "craftoria"
+        slug: craftoria
         include:
           - "create-aeronautics"
