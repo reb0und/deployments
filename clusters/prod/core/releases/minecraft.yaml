@@ -17,7 +17,7 @@ spec:
   interval: 10m0s
   values:
     readinessProbe:
-      initialDelaySeconds: 30
+      initialDelaySeconds: 500
       periodSeconds: 10
       failureThreshold: 30
       timeoutSeconds: 3
