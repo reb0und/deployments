@@ -41,9 +41,3 @@ spec:
       type: "CURSEFORGE"
       version: "1.21.1"
       cfServerMod: "/data/atm-server.zip"
-
-      modrinth:
-        projects: [
-          "create",
-          "sable",
-        ]
