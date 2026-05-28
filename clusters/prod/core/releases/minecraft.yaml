@@ -38,5 +38,5 @@ spec:
       motd: "hi"
       difficulty: normal
       type: "VANILLA"
-      # version: "1.20.1"
+      version: "1.20.1"
       # cfServerMod: "/data/atm-server.zip"
