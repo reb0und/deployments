@@ -38,10 +38,10 @@ spec:
       type: "AUTO_CURSEFORGE"
       version: "1.21.1"
       cfServerMod: "/data/atm-server.zip"
-      autoCurseforge:
+      autoCurseForge:
         apiKey:
           existingSecret: curseforge-api-key
           secretKey: curseforge-api-key
-        pageUrl: "https://www.curseforge.com/minecraft/modpacks/craftoria"
-        # include:
-        #   - "create-aeronautics"
+        slug: "craftoria"
+        include:
+          - "create-aeronautics"
