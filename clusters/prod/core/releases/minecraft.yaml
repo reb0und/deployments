@@ -16,6 +16,13 @@ spec:
       version: '>=5.1.3'
   interval: 10m0s
   values:
+    resources:
+      requests:
+        memory: "8G"
+        cpu: 2
+      limits:
+        memory: "10G"
+        cpu: 3
     image:
       repository: itzg/minecraft-server
       tag: stable-java21
@@ -28,6 +35,13 @@ spec:
       eula: "TRUE"
       motd: "hi"
       difficulty: normal
-      type: "CURSEFORGE"
+      type: "AUTO_CURSEFORGE"
       version: "1.21.1"
       cfServerMod: "/data/atm-server.zip"
+      autoCurseforge:
+        apiKey:
+          existingSecret: curseforge-api-key
+          secretKey: curseforge-api-key
+        slug: "craftoria"
+        # include:
+        #   - "create-aeronautics"
