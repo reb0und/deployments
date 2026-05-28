@@ -35,13 +35,13 @@ spec:
       eula: "TRUE"
       motd: "hi"
       difficulty: normal
-      type: "AUTO_CURSEFORGE"
+      type: "VANILLA"
       version: "1.21.1"
-      cfServerMod: "/data/atm-server.zip"
-      autoCurseforge:
-        apiKey:
-          existingSecret: curseforge-api-key
-          secretKey: curseforge-api-key
-        slug: "craftoria"
-        # include:
-        #   - "create-aeronautics"
+      # cfServerMod: "/data/atm-server.zip"
+      # autoCurseforge:
+      #   apiKey:
+      #     existingSecret: curseforge-api-key
+      #     secretKey: curseforge-api-key
+      #   slug: "craftoria"
+      #   # include:
+      #   #   - "create-aeronautics"
