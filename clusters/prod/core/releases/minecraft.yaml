@@ -28,8 +28,8 @@ spec:
       timeoutSeconds: 3
     resources:
       requests:
-        memory: "10G"
-        cpu: 4
+        memory: "24G"
+        cpu: 8
       limits:
         memory: "32G"
         cpu: 10
