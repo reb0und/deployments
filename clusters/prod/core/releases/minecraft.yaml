@@ -31,7 +31,7 @@ spec:
         memory: "10G"
         cpu: 2
       limits:
-        memory: "14G"
+        memory: "20G"
         cpu: 3
     image:
       repository: itzg/minecraft-server
@@ -47,7 +47,7 @@ spec:
       difficulty: normal
       type: "AUTO_CURSEFORGE"
       version: "1.21.1"
-      memory: 10G
+      memory: 18G
       autoCurseForge:
         apiKey:
           existingSecret: curseforge-api-key
