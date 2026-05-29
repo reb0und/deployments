@@ -55,7 +55,3 @@ spec:
         slug: craftoria
         include:
           - create-aeronautics
-      modrinth:
-        projects:
-          - create
-          - sable
