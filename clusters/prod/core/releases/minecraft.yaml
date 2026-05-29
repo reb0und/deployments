@@ -53,5 +53,3 @@ spec:
           existingSecret: curseforge-api-key
           secretKey: curseforge-api-key
         slug: craftoria
-        include:
-          - create-aeronautics
