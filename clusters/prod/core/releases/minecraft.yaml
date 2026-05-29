@@ -31,8 +31,8 @@ spec:
         memory: "10G"
         cpu: 4
       limits:
-        memory: "20G"
-        cpu: 6
+        memory: "32G"
+        cpu: 10
     image:
       repository: itzg/minecraft-server
       tag: stable-java21
@@ -47,7 +47,7 @@ spec:
       difficulty: normal
       type: "AUTO_CURSEFORGE"
       version: "1.21.1"
-      memory: 18G
+      memory: 26G
       autoCurseForge:
         apiKey:
           existingSecret: curseforge-api-key
