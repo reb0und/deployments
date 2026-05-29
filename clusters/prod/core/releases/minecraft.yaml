@@ -28,10 +28,10 @@ spec:
       timeoutSeconds: 3
     resources:
       requests:
-        memory: "24G"
-        cpu: 8
+        memory: "18G"
+        cpu: 6
       limits:
-        memory: "32G"
+        memory: "24G"
         cpu: 10
     image:
       repository: itzg/minecraft-server
@@ -47,7 +47,9 @@ spec:
       difficulty: normal
       type: "AUTO_CURSEFORGE"
       version: "1.21.1"
-      memory: 26G
+      memory: 20G
+      viewDistance: 6
+      simulationDistance: 4
       autoCurseForge:
         apiKey:
           existingSecret: curseforge-api-key
