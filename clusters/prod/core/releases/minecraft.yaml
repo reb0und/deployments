@@ -50,6 +50,7 @@ spec:
       memory: 20G
       viewDistance: 6
       simulationDistance: 4
+      ops: "r3bnd"
       autoCurseForge:
         apiKey:
           existingSecret: curseforge-api-key
