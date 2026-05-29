@@ -48,8 +48,8 @@ spec:
       type: "AUTO_CURSEFORGE"
       version: "1.21.1"
       memory: 20G
-      viewDistance: 6
-      simulationDistance: 4
+      viewDistance: 5
+      simulationDistance: 3
       ops: "r3bnd"
       autoCurseForge:
         apiKey:
