@@ -18,26 +18,27 @@ spec:
     nodeSelector:
       matchLabels:
         kubernetes.io/hostname: sparrow
-    interface: wg0
----
-apiVersion: cilium.io/v2
-kind: CiliumEgressGatewayPolicy
-metadata:
-  name: mc-egress
-spec:
-  selectors:
-    - podSelector:
-        matchLabels:
-          app: minecraft
-          io.kubernetes.pod.namespace: kube-system
-  destinationCIDRs:
-    - "0.0.0.0/0"
-  excludedCIDRs:
-    - "10.0.0.0/8"
-    - "172.16.0.0/12"
-    - "192.168.0.0/16"
-  egressGateway:
-    nodeSelector:
-      matchLabels:
-        kubernetes.io/hostname: sparrow
-    interface: wg0
+    interface: wg-proton-vpn
+# ---
+# # @TODO: Move this to Minecraft release or deployment
+# apiVersion: cilium.io/v2
+# kind: CiliumEgressGatewayPolicy
+# metadata:
+#   name: mc-egress
+# spec:
+#   selectors:
+#     - podSelector:
+#         matchLabels:
+#           app: minecraft
+#           io.kubernetes.pod.namespace: kube-system
+#   destinationCIDRs:
+#     - "0.0.0.0/0"
+#   excludedCIDRs:
+#     - "10.0.0.0/8"
+#     - "172.16.0.0/12"
+#     - "192.168.0.0/16"
+#   egressGateway:
+#     nodeSelector:
+#       matchLabels:
+#         kubernetes.io/hostname: sparrow
+#     interface: wg0
