@@ -7,7 +7,9 @@ spec:
     - podSelector:
         matchLabels:
           app: qbittorrent
-          io.kubernetes.pod.namespace: kube-system
+      namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: kube-system
   destinationCIDRs:
     - "0.0.0.0/0"
   excludedCIDRs:
