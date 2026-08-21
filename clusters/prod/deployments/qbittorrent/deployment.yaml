@@ -70,9 +70,9 @@ spec:
               value: "6881"
           ports: 
             - containerPort: 8080
-            - containerPort: 6881
               hostPort: 8080
               protocol: TCP
+            - containerPort: 6881
       volumes:
         - name: config
           persistentVolumeClaim:
