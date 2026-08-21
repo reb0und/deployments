@@ -34,6 +34,8 @@ spec:
               value: "true"
           ports: 
             - containerPort: 9117
+              hostPort: 9117
+              protocol: TCP
       volumes:
         - name: config
           persistentVolumeClaim:

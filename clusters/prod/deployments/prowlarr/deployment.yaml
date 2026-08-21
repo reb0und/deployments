@@ -30,6 +30,8 @@ spec:
               value: "Etc/UTC"
           ports: 
             - containerPort: 9696
+              hostPort: 9696
+              protocol: TCP
       volumes:
         - name: config
           persistentVolumeClaim:
