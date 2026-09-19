@@ -5,7 +5,6 @@ metadata:
   namespace: default
 resources:
   - traefik.yaml
-  - mc.yaml
   - jellyfin.yaml
   - jackett.yaml
   - prowlarr.yaml

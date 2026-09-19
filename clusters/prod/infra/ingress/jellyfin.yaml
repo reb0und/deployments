@@ -29,3 +29,17 @@ spec:
       port: 8096
       targetPort: 8096
       nodePort: 30005
+---
+apiVersion: v1
+kind: HTTPRoute
+metadata:
+  name: jellyfin-internet
+  namespace: kube-system
+spec:
+  parentRefs:
+    - name: traefik
+      sectionName: jf-gw
+  rules:
+    - backendRefs:
+      - name: jellyfin
+        port: 8096

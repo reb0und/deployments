@@ -19,7 +19,7 @@ spec:
       allowedRoutes:
         namespaces:
           from: Same
-    - name: mc-gw
+    - name: jf-gw
       protocol: TCP
       port: 3000
       allowedRoutes:
