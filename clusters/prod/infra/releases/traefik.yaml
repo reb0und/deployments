@@ -36,10 +36,10 @@ spec:
           default: true
         nodePort: 30002
         exposedPort: 8001
-      test:
-        port: 3000
-        protocol: TCP
-        expose: 
-          default: true
-        nodePort: 30000
-        exposedPort: 3000
+      # test:
+      #   port: 3000
+      #   protocol: TCP
+      #   expose: 
+      #     default: true
+      #   nodePort: 30000
+      #   exposedPort: 3000
